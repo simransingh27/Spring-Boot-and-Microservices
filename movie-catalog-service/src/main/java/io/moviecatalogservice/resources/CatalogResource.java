@@ -1,9 +1,11 @@
 package io.moviecatalogservice.resources;
 
 import io.moviecatalogservice.models.CatalogItem;
+import io.moviecatalogservice.models.GetRatings;
 import io.moviecatalogservice.models.Movie;
 import io.moviecatalogservice.models.Rating;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,32 +34,28 @@ public class CatalogResource {
          * Then based on movie Id call movie-info API to get the details of the Movie.
          */
 
-        //  Movie test = restTemplate.getForObject("http://localhost:8082/movies/simu", Movie.class);
-        List<Rating> ratings = Arrays.asList(
-                new Rating("123", 4),
-                new Rating("456", 4)
-        );
-        return ratings.stream().map(rating -> {
+        //GetRatings ratings = restTemplate.getForObject("http://localhost:8083//ratingsdata/users/" + userId, GetRatings.class);
+        //Using service discovery
+        GetRatings ratings = restTemplate.getForObject("http://ratings-data-service//ratingsdata/users/" + userId, GetRatings.class);
+        return ratings.getRatings().stream().map(rating -> {
             /**
-             * This is Rest template,first way of calling and fetching data from an API , unmarshal it to object.
-             * Also ,we are using hardcoded url which is a static way of service discovery.
-             * we will change it to dynamic discovery later on.
+             * This is Rest template,first way of calling and fetching data from an API
+             * for each movie id , call movie info service and get details
              * */
-            Movie movie = restTemplate.getForObject("http://localhost:8082/movies/" + rating.getMovieId(), Movie.class);
+            Movie movie = restTemplate.getForObject("http://movie-info-service/movies/" + rating.getMovieId(), Movie.class);
             return new CatalogItem(movie.getName(), "test", rating.getRating());
         })
-                /**
-                 * Second way is to use webclient , below the code . It will do the same thing as rest template but it uses
-                 * Movie movie = webClientBuilder.build()
-                 *                     .get()
-                 *                     .uri("http://localhost:8082/movies/" + rating.getMovieId())
-                 *                     .retrieve()
-                 *                     .bodyToMono(Movie.class)
-                 *                     .block();
-                 * return new CatalogItem(movie.getName(), "test", rating.getRating());
-                 * */
-
+                //putting them all together
                 .collect(Collectors.toList());
-        //  return Collections.singletonList(new CatalogItem("Test", "Test Desc", 4));
+        /**
+         * Second way is to use webclient , below the code . It will do the same thing as rest template but it uses
+         * Movie movie = webClientBuilder.build()
+         *                     .get()
+         *                     .uri("http://localhost:8082/movies/" + rating.getMovieId())
+         *                     .retrieve()
+         *                     .bodyToMono(Movie.class)
+         *                     .block();
+         * return new CatalogItem(movie.getName(), "test", rating.getRating());
+         * */
     }
 }

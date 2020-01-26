@@ -2,16 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d94fdd-6099-4aa5-9527-087f3956124e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/models/GetRatings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ratings-data-service/src/main/java/io/ratingsdataservice/models/GetRatings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-catalog-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/MovieCatalogServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/MovieCatalogServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/models/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/models/Rating.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/resources/CatalogResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/resources/CatalogResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-info-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-info-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-info-service/src/main/java/io/movieinfoservice/MovieInfoServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/io/movieinfoservice/MovieInfoServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ratings-data-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ratings-data-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ratings-data-service/src/main/java/io/ratingsdataservice/RatingsDataServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ratings-data-service/src/main/java/io/ratingsdataservice/RatingsDataServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ratings-data-service/src/main/java/io/ratingsdataservice/resources/RatingResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/ratings-data-service/src/main/java/io/ratingsdataservice/resources/RatingResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,13 +55,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548212413544" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ratings-data-service/src/main/java/io/ratingsdataservice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eureka-server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.ratingsdataservice.models" />
       <recent name="io.moviecatalogservice.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -61,7 +76,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MovieCatalogServiceApplication (1)">
+  <component name="RunManager" selected="Spring Boot.RatingsDataServiceApplication (1)">
     <configuration name="MovieCatalogServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.javabrains.moviecatalogservice.MovieCatalogServiceApplication" />
       <module name="movie-catalog-service" />
@@ -158,7 +173,7 @@
       <workItem from="1579852570179" duration="176000" />
       <workItem from="1579852887279" duration="4271000" />
       <workItem from="1580002937038" duration="34000" />
-      <workItem from="1580011288024" duration="5038000" />
+      <workItem from="1580011288024" duration="14407000" />
     </task>
     <task id="LOCAL-00001" summary="Rest template basics">
       <created>1580042831264</created>
@@ -167,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580042831264</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rest template and WebClient">
+      <created>1580047830640</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580047830640</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,57 +197,66 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rest template basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rest template basics" />
+    <MESSAGE value="Rest template and WebClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest template and WebClient" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1580047979655">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1580047979655" />
     <state x="531" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579852596004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="531" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1579852596004" />
-    <state x="196" y="0" key="CommitChangelistDialog2" timestamp="1580047799328">
+    <state x="196" y="0" key="CommitChangelistDialog2" timestamp="1580047829668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="196" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580047799328" />
-    <state width="905" height="179" key="GridCell.Tab.0.bottom" timestamp="1580047799384">
+    <state x="196" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580047829668" />
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1580059445499">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580047799384" />
-    <state width="905" height="179" key="GridCell.Tab.0.center" timestamp="1580047799384">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580059445499" />
+    <state width="905" height="269" key="GridCell.Tab.0.bottom" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580047799384" />
-    <state width="905" height="179" key="GridCell.Tab.0.left" timestamp="1580047799384">
+    <state width="905" height="269" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.0.center" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580047799384" />
-    <state width="905" height="179" key="GridCell.Tab.0.right" timestamp="1580047799384">
+    <state width="905" height="269" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.0.left" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580047799384" />
-    <state width="905" height="179" key="GridCell.Tab.1.bottom" timestamp="1580047799388">
+    <state width="905" height="269" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.0.right" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580047799388" />
-    <state width="905" height="179" key="GridCell.Tab.1.center" timestamp="1580047799384">
+    <state width="905" height="269" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.1.bottom" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1580047799384" />
-    <state width="905" height="179" key="GridCell.Tab.1.left" timestamp="1580047799384">
+    <state width="905" height="269" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.1.center" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1580047799384" />
-    <state width="905" height="179" key="GridCell.Tab.1.right" timestamp="1580047799388">
+    <state width="905" height="269" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.1.left" timestamp="1580074693819">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1580047799388" />
+    <state width="905" height="269" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
+    <state width="905" height="269" key="GridCell.Tab.1.right" timestamp="1580074693819">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="269" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1580074693819" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1579852921505">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579852921505" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1580042835532">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1580047854764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580042835532" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580047854764" />
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1580002938933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -234,5 +265,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1580042806332" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/movie-catalog-service/src/main/java/io/moviecatalogservice/MovieCatalogServiceApplication.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
